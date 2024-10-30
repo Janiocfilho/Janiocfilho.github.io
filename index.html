@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Jânio César</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Reset */
+<!doctype html>
+<html lang="pt-BR"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Portfólio de Jânio César</title> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+  <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
-
-        /* Estilos gerais */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #E5E5E5;
@@ -22,8 +19,6 @@
             line-height: 1.7;
             overflow-x: hidden;
         }
-
-        /* Header */
         header {
             display: flex;
             flex-direction: column;
@@ -85,8 +80,6 @@
         nav a:active {
             transform: scale(0.95);
         }
-
-        /* Seções */
         section {
             padding: 3rem 2rem;
             max-width: 900px;
@@ -95,7 +88,7 @@
             border-radius: 10px;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s;
-            text-align: center; /* Centraliza o texto */
+            text-align: center;
         }
         section:hover {
             transform: scale(1.02);
@@ -107,10 +100,8 @@
         }
         #about p, #projects p {
             color: #CCCCCC;
-            text-align: center; /* Centraliza o texto do parágrafo */
+            text-align: center;
         }
-
-        /* Projetos */
         .project-placeholder {
             display: flex;
             align-items: center;
@@ -130,8 +121,8 @@
         .project-placeholder::before, .project-placeholder::after {
             content: "";
             position: absolute;
-            width: 200px; /* Tamanho padrão para desktop */
-            height: 200px; /* Tamanho padrão para desktop */
+            width: 200px;
+            height: 200px;
             background: rgba(76, 175, 80, 0.3);
             border-radius: 50%;
             animation: float 4s ease-in-out infinite;
@@ -152,8 +143,6 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-20px); }
         }
-
-        /* Redes Sociais */
         .social-buttons {
             display: flex;
             justify-content: center;
@@ -170,8 +159,6 @@
             color: #4CAF50;
             transform: translateY(-5px);
         }
-
-        /* Footer */
         footer {
             text-align: center;
             padding: 1.5rem 0;
@@ -180,8 +167,6 @@
             font-size: 0.9rem;
             margin-top: 2rem;
         }
-
-        /* Animações */
         .fade-in {
             animation: fadeIn 1s ease-in-out;
         }
@@ -195,8 +180,6 @@
                 transform: translateY(0);
             }
         }
-
-        /* Responsividade */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -215,94 +198,80 @@
                 height: 120px;
             }
             .project-placeholder {
-                height: auto; /* Ajusta a altura */
-                font-size: 1rem; /* Diminui o tamanho da fonte */
-                padding: 1rem; /* Adiciona um pouco de padding */
+                height: auto;
+                font-size: 1rem;
+                padding: 1rem;
             }
             .project-placeholder::before, .project-placeholder::after {
-                width: 120px; /* Tamanho reduzido para mobile */
-                height: 120px; /* Tamanho reduzido para mobile */
-/* Pequenos dispositivos (celulares em modo retrato) */
-@media (max-width: 576px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
-    .intro {
-        font-size: 0.8rem;
-    }
-    .project-placeholder {
-        height: auto;
-        font-size: 0.9rem;
-        padding: 0.5rem;
-    }
-    .profile-pic {
-        width: 100px;
-        height: 100px;
-    }
-    nav {
-        flex-direction: column;
-    }
-}
-
-/* Dispositivos médios (tablets e celulares maiores) */
-@media (min-width: 577px) and (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-    .profile-pic {
-        width: 120px;
-        height: 120px;
-    }
-    .project-placeholder::before, .project-placeholder::after {
-        width: 100px;
-        height: 100px;
-    }
-}
+                width: 120px;
+                height: 120px;
+            }
+            @media (max-width: 576px) {
+                h1 {
+                    font-size: 1.8rem;
+                }
+                h2 {
+                    font-size: 1.5rem;
+                }
+                .intro {
+                    font-size: 0.8rem;
+                }
+                .project-placeholder {
+                    height: auto;
+                    font-size: 0.9rem;
+                    padding: 0.5rem;
+                }
+                .profile-pic {
+                    width: 100px;
+                    height: 100px;
+                }
+                nav {
+                    flex-direction: column;
+                }
+            }
+            @media (min-width: 577px) and (max-width: 768px) {
+                h1 {
+                    font-size: 2.2rem;
+                }
+                .profile-pic {
+                    width: 120px;
+                    height: 120px;
+                }
+                .project-placeholder::before, .project-placeholder::after {
+                    width: 100px;
+                    height: 100px;
+                }
             }
         }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="profile-pic fade-in">
-            <img src="https://i.imgur.com/pt66q2g.jpeg" alt="Foto de Jânio César">
-        </div>
-        <h1>Jânio César</h1>
-        <p class="intro">Desenvolvedor Fullstack com foco em IA e Machine Learning, criando soluções inovadoras para um futuro mais inteligente.</p>
-        <nav>
-            <a href="#about">Sobre Mim</a>
-            <a href="#projects">Projetos</a>
-            <a href="#contact">Contato</a>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>Sobre Mim</h2>
-        <p>Olá! Meu nome é Jânio César, sou desenvolvedor e entusiasta de IA. Tenho 18 anos e estou cursando programação, explorando tecnologias como Python e outras ferramentas essenciais para o desenvolvimento de sistemas e web. Minha missão é criar soluções inovadoras que tenham um impacto significativo.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projetos</h2>
-        <div class="project-placeholder fade-in">
-            <span>Nenhum projeto disponível no momento, mas em breve!</span>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contato</h2>
-        <p>Conecte-se comigo:</p>
-        <div class="social-buttons"> 
-            <a href="https://www.instagram.com/janiocfilho/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/Janiocfilho" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/j%C3%A2nio-c%C3%A9sar-687763291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </section>
-
-    <footer>
-        &copy; 2024 Jânio César. Todos os direitos reservados.
-    </footer>
-</body>
+    </style> 
+ </head> 
+ <body> 
+  <header> 
+   <div class="profile-pic fade-in"> 
+    <img src="https://i.imgur.com/pt66q2g.jpeg" alt="Foto de Jânio César"> 
+   </div> 
+   <h1>Jânio César</h1> 
+   <p class="intro">Desenvolvedor Fullstack com foco em IA e Machine Learning, criando soluções inovadoras para um futuro mais inteligente.</p> 
+   <nav> <a href="#about">Sobre Mim</a> <a href="#projects">Projetos</a> <a href="#contact">Contato</a> 
+   </nav> 
+  </header> 
+  <section id="about"> 
+   <h2>Sobre Mim</h2> 
+   <p>Olá! Meu nome é Jânio César, sou desenvolvedor e entusiasta de IA. Tenho 18 anos e estou cursando programação, explorando tecnologias como Python e outras ferramentas essenciais para o desenvolvimento de sistemas e web. Minha missão é criar soluções inovadoras que tenham um impacto significativo.</p> 
+  </section> 
+  <section id="projects"> 
+   <h2>Projetos</h2> 
+   <div class="project-placeholder fade-in"> <span>Nenhum projeto disponível no momento, mas em breve!</span> 
+   </div> 
+  </section> 
+  <section id="contact"> 
+   <h2>Contato</h2> 
+   <p>Conecte-se comigo:</p> 
+   <div class="social-buttons"> <a href="https://www.instagram.com/janiocfilho/" target="_blank"><i class="fab fa-instagram"></i></a> <a href="https://github.com/Janiocfilho" target="_blank"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/j%C3%A2nio-c%C3%A9sar-687763291?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a> 
+   </div> 
+  </section> 
+  <footer>
+    © 2024 Jânio César. Todos os direitos reservados. 
+  </footer> 
+ </body>
 </html>
